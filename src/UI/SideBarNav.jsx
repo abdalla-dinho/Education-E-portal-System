@@ -104,7 +104,7 @@ function SideBarNav() {
           <span>Settings</span>
         </NavItem>
 
-        {Role?.trim() === "Admin" && (
+        {Role === "Admin" && (
           <>
             <NavItem as={NavLink} to="user">
               <FaUser />

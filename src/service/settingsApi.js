@@ -27,8 +27,6 @@ export async function updateAccount({ fullname, avatar }) {
 
   if (!avatar) return data;
 
-  // 1) create filename
-
   const fileName = `avatar-${data.user.id}-${Math.random()}`;
 
   const { error: storageError } = await supabase.storage

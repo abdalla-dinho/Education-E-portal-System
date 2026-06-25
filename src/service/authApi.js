@@ -41,15 +41,13 @@ export async function getProfile() {
 
   let { data: profileData, error: profileError } = await supabase
     .from("Profiles")
-    .select("*")
+    .select("Role")
     .eq("user_id", id)
     .single();
 
-  console.log(profileData);
-
   if (profileError) throw new Error(profileError.message);
 
-  return profileData;
+  return { profileData };
 }
 
 export async function logout() {
@@ -88,7 +86,7 @@ export async function createUser({
   if (error) throw new Error(error.message);
 
   const { error: studentError } = await supabase
-    .from("Student_table")
+    .from("Profiles")
     .insert([{ user_id: id, major_id: major, semester_id: semester, fullname }])
     .select();
 

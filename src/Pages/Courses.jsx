@@ -1,5 +1,5 @@
-import CoursesTable from "../features/Courses/CoursesTable";
 import Filter from "../UI/Filter";
+import CoursesTable from "../features/Courses/CoursesTable";
 
 function Courses() {
   return (
