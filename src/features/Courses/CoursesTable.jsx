@@ -18,12 +18,6 @@ function CoursesTable() {
       <CourseOverview />
       <Assigments />
 
-      <select name="" id="10">
-        <option value="1">1</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-      </select>
-
       <CourseScheduling />
     </div>
   );
